@@ -1,0 +1,1 @@
+mvn clean test-compile exec:java -Dexec.mainClass="Starter" -Ptest -Dexec.cleanupDaemonThreads=false

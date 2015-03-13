@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Mar 13 23:24:02 EAT 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014c-14ce-d52d-000004e702f0 
+on database directory /home/boro/examples_for_itis/boro/boro.db_test with class loader java.net.URLClassLoader@344846ba 
+Loaded from file:/home/boro/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_31-b13
+user.dir=/home/boro/examples_for_itis/boro
+os.name=Linux
+os.arch=amd64
+os.version=3.13.0-36-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
