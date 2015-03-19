@@ -1,1 +1,8 @@
+db/entity/Order.class
+db/entity/Student.class
+db/config/DatabaseConfiguration.class
+db/dao/Dao.class
 Starter.class
+db/dao/StudentDao.class
+db/entity/Model.class
+db/dao/OrderDao.class

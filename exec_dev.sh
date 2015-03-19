@@ -1,1 +1,1 @@
-mvn clean compile exec:java -Dexec.mainClass="Starter" -Pdev -Dexec.cleanupDaemonThreads=false
+mvn clean  compile  exec:java -Dexec.mainClass="Starter" -Pdev -Dexec.cleanupDaemonThreads=false

@@ -1,1 +1,8 @@
+/home/boro/examples_for_itis/boro/src/main/java/db/entity/Model.java
+/home/boro/examples_for_itis/boro/src/main/java/db/entity/Order.java
+/home/boro/examples_for_itis/boro/src/main/java/db/config/DatabaseConfiguration.java
+/home/boro/examples_for_itis/boro/src/main/java/db/entity/Student.java
+/home/boro/examples_for_itis/boro/src/main/java/db/dao/OrderDao.java
+/home/boro/examples_for_itis/boro/src/main/java/db/dao/StudentDao.java
+/home/boro/examples_for_itis/boro/src/main/java/db/dao/Dao.java
 /home/boro/examples_for_itis/boro/src/main/java/Starter.java
