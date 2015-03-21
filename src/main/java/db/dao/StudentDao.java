@@ -35,7 +35,7 @@ public class StudentDao implements Dao<Student>{
 
 
 
-   /* private Connection getConnection() throws IOException, SQLException {
+  private Connection getConnection() throws IOException, SQLException {
         Properties properties = new Properties();
         ClassLoader classLoader = StudentDao.class.getClassLoader();
         InputStream inputStream = classLoader.getResourceAsStream("derby.properties");
@@ -46,12 +46,14 @@ public class StudentDao implements Dao<Student>{
     public void delete(long id) throws IOException, SQLException {
         Statement statement = getConnection().createStatement();
         String sql = "DELETE FROM STUDENTS WHERE ID= "+id;
+        getConnection().close();
         statement.execute(sql);
     }
     public ResultSet read(long id) throws IOException, SQLException {
         Statement statement = getConnection().createStatement();
         String sql = "SELECT FROM STUDENTS WHERE ID= "+id;
         statement.execute(sql);
+        getConnection().close();
         return statement.getResultSet();
     }
 
@@ -82,5 +84,5 @@ public class StudentDao implements Dao<Student>{
         String sql = "INSERT INTO STUDENTS (lastname, firstname, age) VALUES ("+ lastname+","+firstname+","+age+")";
         statement.execute(sql);
 
-    }*/
+    }
 }

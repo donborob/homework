@@ -27,7 +27,8 @@ public class OrderDao implements Dao<Order>{
         entityManager.getTransaction().commit();
     }
     @Override
-    public Order get(long id){
+    public Order get(long id)
+    {
         return entityManager.find(Order.class, id);
     }
 
@@ -35,7 +36,7 @@ public class OrderDao implements Dao<Order>{
         return (Long) entityManager.createQuery("select count(*) from Order").getResultList().get(0);
     }
 
-    /*private static Connection getConnection() throws IOException, SQLException
+  private static Connection getConnection() throws IOException, SQLException
      {
        Properties properties = new Properties();
         ClassLoader classLoader = StudentDao.class.getClassLoader();
@@ -48,12 +49,14 @@ public class OrderDao implements Dao<Order>{
         Statement statement = getConnection().createStatement();
         String sql = "DELETE FROM ORDERS WHERE ID= "+id;
         statement.execute(sql);
+        getConnection().close();
     }
 
     public static  ResultSet read(long id) throws IOException, SQLException {
         Statement statement = getConnection().createStatement();
         String sql = "SELECT * FROM ORDERS WHERE ID= "+id;
         statement.execute(sql);
+        getConnection().close();
        return statement.getResultSet();
     }
 
@@ -61,21 +64,25 @@ public class OrderDao implements Dao<Order>{
         Statement statement = getConnection().createStatement();
         String sql = "UPDATE ORDERS SET sellerId = "+sellerId +" WHERE id = " +id +")";
         statement.execute(sql);
+        getConnection().close();
     }
     public static void updateCustomerId(long id, String customerId) throws IOException, SQLException {
         Statement statement = getConnection().createStatement();
         String sql = "UPDATE  ORDERS SET customerId = "+customerId +" WHERE id = " +id +")";
         statement.execute(sql);
+        getConnection().close();
     }
     public static void updateTotalAmount(long id, String totalAmount) throws IOException, SQLException {
         Statement statement = getConnection().createStatement();
         String sql = "UPDATE  ORDERS SET totalAmount = "+totalAmount +" WHERE id = " +id +")";
         statement.execute(sql);
+        getConnection().close();
     }
 
     public static void create(int sellerId, int customerId, int totalAmount ) throws IOException, SQLException {
         Statement statement = getConnection().createStatement();
-        String sql = "INSERT INTO ORDERS (sellerId,customerId,totalAmount) VALUES ("+sellerId+","+ customerId+","+totalAmount+")";
+        String sql = "INSERT INTO ORDERS (sellerId,customerId,totalAmount) VALUES (" + sellerId + "," + customerId + "," + totalAmount + ")";
         statement.execute(sql);
-*/
+        getConnection().close();
+        }
     }
