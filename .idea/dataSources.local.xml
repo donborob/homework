@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Derby - boroDev" uuid="234e37a5-d15e-4590-b6c7-9246595670ff">
+    <data-source name="Derby" uuid="acd33c46-8def-4baf-9bfd-ea985314e8ed">
       <secret-storage>master_key</secret-storage>
       <schema-pattern>*</schema-pattern>
       <default-schemas>*.APP</default-schemas>
     </data-source>
-    <data-source name="Derby - boroTest" uuid="168c174d-0788-4fa4-8413-70bce5667853">
+    <data-source name="Derby1" uuid="7449e6b3-a725-4fc0-976e-6040d9108f87">
       <secret-storage>master_key</secret-storage>
       <schema-pattern>*</schema-pattern>
       <default-schemas>*.APP</default-schemas>
+      <table-pattern>orders</table-pattern>
     </data-source>
   </component>
 </project>

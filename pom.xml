@@ -9,10 +9,43 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+
         <dependency>
             <groupId>org.apache.derby</groupId>
             <artifactId>derby</artifactId>
             <version>10.11.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.1.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>4.1.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>4.1.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>4.1.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.1.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>4.1.5.RELEASE</version>
         </dependency>
     </dependencies>
 
@@ -20,6 +53,11 @@
         <finalName>itis-maven-filtering</finalName>
 
         <plugins>
+            <plugin>
+            <groupId>org.apache.cayenne.plugins</groupId>
+            <artifactId>maven-cayenne-plugin</artifactId>
+            <version>3.2M1</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -62,7 +100,8 @@
             <id>dev</id>
             <properties>
                 <db.schema.name>itis_maven_schema_dev</db.schema.name>
-                <jdbc.db.url>jdbc:derby:boro.db_dev;create=true</jdbc.db.url>
+                <jdbc.connection.driver_class>org.apache.derby.jdbc.EmbeddedDriver</jdbc.connection.driver_class>
+                <jdbc.db.url>jdbc:derby:dbDev;create=true</jdbc.db.url>
                 <jdbc.db.user>dbuser</jdbc.db.user>
                 <jdbc.db.password>password</jdbc.db.password>
             </properties>

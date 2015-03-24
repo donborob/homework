@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="569110834">
-    <data-source source="LOCAL" name="Derby - boroDev" uuid="234e37a5-d15e-4590-b6c7-9246595670ff">
+  <component name="DataSourceManagerImpl" format="xml" hash="3680699316">
+    <data-source source="LOCAL" name="Derby" uuid="acd33c46-8def-4baf-9bfd-ea985314e8ed">
       <driver-ref>derby.embedded</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
-      <jdbc-url>jdbc:derby:boro.db_dev;create=true</jdbc-url>
+      <jdbc-url>jdbc:derby:dbTest;create=true</jdbc-url>
       <libraries />
     </data-source>
-    <data-source source="LOCAL" name="Derby - boroTest" uuid="168c174d-0788-4fa4-8413-70bce5667853">
+    <data-source source="LOCAL" name="Derby1" uuid="7449e6b3-a725-4fc0-976e-6040d9108f87">
       <driver-ref>derby.embedded</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
-      <jdbc-url>jdbc:derby:boro.db_test;create=true</jdbc-url>
+      <jdbc-url>jdbc:derby:dbDev;create=true</jdbc-url>
       <libraries />
     </data-source>
   </component>

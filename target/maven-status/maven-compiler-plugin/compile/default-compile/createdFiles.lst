@@ -1,1 +1,9 @@
 Starter.class
+model/Order.class
+dao/Dao.class
+config/DatabaseConfig.class
+model/User.class
+model/Model.class
+dao/UserDao.class
+dao/OperationManager.class
+dao/OrderDao.class
