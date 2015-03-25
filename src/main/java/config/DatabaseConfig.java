@@ -17,7 +17,6 @@ import java.sql.SQLException;
 @Configuration
 public class DatabaseConfig {
     @Value("${connectionUrl}")
-    // When set the value via derby-env.properties or/and ${} throws driver not found exception
     private String dbUrl;
 
     public String getDbUrl() throws ClassNotFoundException, SQLException {

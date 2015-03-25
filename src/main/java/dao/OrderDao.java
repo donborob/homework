@@ -21,7 +21,7 @@ public class OrderDao implements Dao<Order> {
 
     @Override
     public void create(Order order) throws IOException, SQLException, ClassNotFoundException {
-        Connection connection = operationManager.setConnection();
+        operationManager.setConnection();
         String sql = "INSERT INTO ORDERS VALUES ( DEFAULT, "+order.getSellerId()
                 +","+order.getCustomerId()+","+order.getTotalAmount()+")";
         operationManager.doQuery(sql);
@@ -30,9 +30,9 @@ public class OrderDao implements Dao<Order> {
 
     @Override
     public Order get(int id) throws SQLException, IOException, ClassNotFoundException {
-        Connection connection = operationManager.setConnection();
+        operationManager.setConnection();
         String sql = "SELECT sellerId,customerId,totalAmount FROM ORDERS WHERE ID = "+ id;
-        ResultSet resultSet = operationManager.getResultSet(connection, sql);
+        ResultSet resultSet = operationManager.getResultSet(sql);
         Order order = new Order();
 
             while (resultSet.next()) {
@@ -48,9 +48,9 @@ public class OrderDao implements Dao<Order> {
     @Override
     public ArrayList<Order> getAll() throws SQLException, IOException, ClassNotFoundException {
         ArrayList<Order> orders = new ArrayList<Order>();
-        Connection connection = operationManager.setConnection();
+        operationManager.setConnection();
         String sql = "SELECT sellerId,customerId,totalAmount FROM ORDERS";
-        ResultSet resultSet = operationManager.getResultSet(connection, sql);
+        ResultSet resultSet = operationManager.getResultSet(sql);
 
         int i = 1;
         while (resultSet.next()) {
@@ -68,7 +68,7 @@ public class OrderDao implements Dao<Order> {
 
     @Override
     public void update(Order order, int id) throws SQLException, IOException, ClassNotFoundException {
-        Connection connection = operationManager.setConnection();
+        operationManager.setConnection();
         String sql = "UPDATE  ORDERS o SET o.sellerId = "+order.getSellerId()+", o.customerId = "
                 +order.getCustomerId()+", o.totalAmount = "+order.getTotalAmount()+"WHERE id = "+id;
         operationManager.doQuery( sql);
@@ -77,7 +77,7 @@ public class OrderDao implements Dao<Order> {
 
     @Override
     public void delete(int id) throws SQLException, IOException, ClassNotFoundException {
-        Connection connection = operationManager.setConnection();
+        operationManager.setConnection();
         String sql = "DELETE FROM ORDERS WHERE id = " + id;
         operationManager.doQuery( sql);
         operationManager.closeConnection();
@@ -85,9 +85,9 @@ public class OrderDao implements Dao<Order> {
 
     @Override
     public int getCount() throws SQLException, IOException, ClassNotFoundException {
-        Connection connection = operationManager.setConnection();
+        operationManager.setConnection();
         String sql = "SELECT COUNT(*) FROM  ORDERS";
-        ResultSet resultSet= operationManager.getResultSet(connection, sql);
+        ResultSet resultSet= operationManager.getResultSet(sql);
         resultSet.next();
         int count = Integer.parseInt(resultSet.getString(1));
         operationManager.closeConnection();

@@ -31,7 +31,7 @@ public class OperationManager{
         }
         return connection;
     }
-    ResultSet getResultSet(Connection connection, String query) throws SQLException {
+    ResultSet getResultSet(String query) throws SQLException {
         Statement statement = connection.createStatement();
          ResultSet resultSet = statement.executeQuery(query);
          return resultSet;

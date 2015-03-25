@@ -30,7 +30,7 @@ public class UserDao implements Dao<User> {
     public User get(int id) throws SQLException, IOException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
         String sql = "SELECT firstname,lastname,age FROM USERS WHERE id = "+ id;
-        ResultSet resultSet = operationManager.getResultSet(connection, sql);
+        ResultSet resultSet = operationManager.getResultSet(sql);
        User user = new User();
 
         if (resultSet.next()) {
@@ -48,7 +48,7 @@ public class UserDao implements Dao<User> {
         ArrayList<User> users = new ArrayList<User>();
         Connection connection = operationManager.setConnection();
         String sql = "SELECT firstname,lastname,age FROM USERS";
-        ResultSet resultSet = operationManager.getResultSet(connection, sql);
+        ResultSet resultSet = operationManager.getResultSet(sql);
 
         int i = 1;
         while (resultSet.next()) {
@@ -85,7 +85,7 @@ public class UserDao implements Dao<User> {
     public int getCount() throws SQLException, IOException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
         String sql = "SELECT COUNT (*) FROM  USERS";
-        ResultSet resultSet= operationManager.getResultSet(connection, sql);
+        ResultSet resultSet= operationManager.getResultSet(sql);
         resultSet.next();
         int count = Integer.parseInt(resultSet.getString(1));
         operationManager.closeConnection();
