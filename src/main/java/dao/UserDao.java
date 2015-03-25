@@ -1,6 +1,8 @@
 package dao;
 
 import model.User;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -12,14 +14,16 @@ import java.util.ArrayList;
  * Created by boro on 23.03.15.
  */
 public class UserDao implements Dao<User> {
-    OperationManager operationManager = new OperationManager();
+    ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+    OperationManager operationManager = (OperationManager) context.getBean("operationManager");
+
     @Override
     public void create(User user) throws IOException, SQLException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
         String sql = "INSERT INTO USERS (id, firstname, lastname, age) VALUES ( DEFAULT, '"+user.getFirstname()
                 +"', '"+user.getLastname()+"', "+user.getAge()+")";
-        operationManager.doQuery(connection,sql);
-        operationManager.closeConnection(connection);
+        operationManager.doQuery(sql);
+        operationManager.closeConnection();
     }
 
     @Override
@@ -35,7 +39,7 @@ public class UserDao implements Dao<User> {
             user.setFirstname(resultSet.getString(1));
             user.setLastname(resultSet.getString(2));
         }
-        operationManager.closeConnection(connection);
+        operationManager.closeConnection();
         return user;
     }
 
@@ -56,7 +60,7 @@ public class UserDao implements Dao<User> {
            users.add(user);
             i++;
         }
-        operationManager.closeConnection(connection);
+        operationManager.closeConnection();
         return users;
     }
 
@@ -65,16 +69,16 @@ public class UserDao implements Dao<User> {
         Connection connection = operationManager.setConnection();
         String sql = "UPDATE USERS SET firstname = '"+user.getFirstname() +"', lastname = '"
                 +user.getLastname()+"', age = "+user.getAge()+" WHERE id = "+id;
-        operationManager.doQuery(connection, sql);
-        operationManager.closeConnection(connection);
+        operationManager.doQuery(sql);
+        operationManager.closeConnection();
     }
 
     @Override
     public void delete(int id) throws SQLException, IOException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
         String sql = "DELETE FROM  APP.USERS WHERE id = " +id;
-        operationManager.doQuery(connection, sql);
-        operationManager.closeConnection(connection);
+        operationManager.doQuery( sql);
+        operationManager.closeConnection();
     }
 
     @Override
@@ -84,7 +88,7 @@ public class UserDao implements Dao<User> {
         ResultSet resultSet= operationManager.getResultSet(connection, sql);
         resultSet.next();
         int count = Integer.parseInt(resultSet.getString(1));
-        operationManager.closeConnection(connection);
+        operationManager.closeConnection();
         return count;
     }
 }

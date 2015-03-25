@@ -19,12 +19,16 @@ import java.util.Properties;
  */
 public class OperationManager{
     @Autowired
+    private Connection connection;
+
+    @Autowired
     private DatabaseConfig config;
 
-    public Connection setConnection() throws IOException, SQLException, ClassNotFoundException {
 
-        Connection connection = DriverManager.getConnection("jdbc:derby:dbDev;create=true");// When set the value via derby-env.properties
-        // or/and ${} throws driver not found exception
+    public Connection setConnection() throws IOException, SQLException, ClassNotFoundException {
+        if (connection.isClosed()){
+            connection = DriverManager.getConnection(config.getDbUrl());
+        }
         return connection;
     }
     ResultSet getResultSet(Connection connection, String query) throws SQLException {
@@ -32,12 +36,12 @@ public class OperationManager{
          ResultSet resultSet = statement.executeQuery(query);
          return resultSet;
     }
-    void doQuery(Connection connection, String query) throws SQLException {
+    void doQuery(String query) throws SQLException {
         Statement statement = connection.createStatement();
        statement.executeUpdate(query);
     }
 
-    public void closeConnection(Connection connection) throws SQLException {
+    public void closeConnection() throws SQLException {
         try {
             connection.close();
         } catch (SQLException e) {

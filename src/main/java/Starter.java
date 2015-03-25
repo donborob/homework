@@ -9,8 +9,9 @@ import java.io.IOException;
 import java.sql.*;
 
 public class Starter {
+
     @Autowired
-   private static DatabaseConfig config;
+    private Connection connection;
 
     public static void main(String args[]) throws SQLException, IOException, ClassNotFoundException, IllegalAccessException, InstantiationException {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -44,8 +45,8 @@ public class Starter {
     }
 
     public  void createTables() throws SQLException, ClassNotFoundException, IllegalAccessException, InstantiationException {
-        Connection connection = DriverManager.getConnection("jdbc:derby:dbDev;create=true");
-        Statement statement = connection.createStatement();
+              Statement statement = connection.createStatement();
+        statement.execute("DROP TABLE USERS");
         String sql = "CREATE TABLE USERS ("
                 + "id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),"
                 + "firstname VARCHAR(255) not NULL,"

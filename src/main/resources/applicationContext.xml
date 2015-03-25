@@ -10,14 +10,11 @@
 
     <bean id="starter" class="Starter">
     </bean>
-
+    <bean id="operationManager" class="dao.OperationManager">
+    </bean>
+    <context:component-scan base-package= "config" />
     <context:annotation-config/>
     <bean id="config" class="config.DatabaseConfig">
-
     </bean>
-
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:derby-env.properties"/>
-    </bean>
-
-</beans>
+    <context:property-placeholder location="classpath:derby-env.properties" />
+    </beans>

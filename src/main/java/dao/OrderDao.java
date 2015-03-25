@@ -2,6 +2,8 @@ package dao;
 
 import model.Model;
 import model.Order;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -13,14 +15,17 @@ import java.util.ArrayList;
  * Created by boro on 23.03.15.
  */
 public class OrderDao implements Dao<Order> {
-    OperationManager operationManager = new OperationManager();
+
+    ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+    OperationManager operationManager = (OperationManager) context.getBean("operationManager");
+
     @Override
     public void create(Order order) throws IOException, SQLException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
         String sql = "INSERT INTO ORDERS VALUES ( DEFAULT, "+order.getSellerId()
                 +","+order.getCustomerId()+","+order.getTotalAmount()+")";
-        operationManager.doQuery(connection,sql);
-        operationManager.closeConnection(connection);
+        operationManager.doQuery(sql);
+        operationManager.closeConnection();
     }
 
     @Override
@@ -36,7 +41,7 @@ public class OrderDao implements Dao<Order> {
                 order.setSellerId(Integer.parseInt(resultSet.getString(1)));
                 order.setCustomerId(Integer.parseInt(resultSet.getString(2)));
             }
-        operationManager.closeConnection(connection);
+        operationManager.closeConnection();
         return order;
     }
 
@@ -57,7 +62,7 @@ public class OrderDao implements Dao<Order> {
             orders.add(order);
             i++;
         }
-        operationManager.closeConnection(connection);
+        operationManager.closeConnection();
         return orders;
     }
 
@@ -66,16 +71,16 @@ public class OrderDao implements Dao<Order> {
         Connection connection = operationManager.setConnection();
         String sql = "UPDATE  ORDERS o SET o.sellerId = "+order.getSellerId()+", o.customerId = "
                 +order.getCustomerId()+", o.totalAmount = "+order.getTotalAmount()+"WHERE id = "+id;
-        operationManager.doQuery(connection, sql);
-        operationManager.closeConnection(connection);
+        operationManager.doQuery( sql);
+        operationManager.closeConnection();
     }
 
     @Override
     public void delete(int id) throws SQLException, IOException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
         String sql = "DELETE FROM ORDERS WHERE id = " + id;
-        operationManager.doQuery(connection, sql);
-        operationManager.closeConnection(connection);
+        operationManager.doQuery( sql);
+        operationManager.closeConnection();
     }
 
     @Override
@@ -85,7 +90,7 @@ public class OrderDao implements Dao<Order> {
         ResultSet resultSet= operationManager.getResultSet(connection, sql);
         resultSet.next();
         int count = Integer.parseInt(resultSet.getString(1));
-        operationManager.closeConnection(connection);
+        operationManager.closeConnection();
         return count;
     }
 }
