@@ -1,4 +1,3 @@
-import config.DatabaseConfig;
 import dao.OrderDao;
 import dao.UserDao;
 import model.User;
@@ -35,7 +34,7 @@ public class Starter {
         User user = userDao.get(2);
         user.setAge(59);
         user.setFirstname("Pavel");
-        userDao.update(user, user.getId()+1);
+        userDao.update(user, user.getId());
         for (int i = 0; i<userDao.getAll().size(); i++) {
             System.out.println("USERS: " + userDao.getAll().get(i).toString());
         }

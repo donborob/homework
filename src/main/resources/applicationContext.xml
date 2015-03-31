@@ -10,7 +10,7 @@
 
     <bean id="starter" class="Starter">
     </bean>
-    <bean id="operationManager" class="dao.OperationManager">
+    <bean id="operationManager" class="dao.manager.OperationManager">
     </bean>
     <context:component-scan base-package= "config, dao" />
     <context:annotation-config/>

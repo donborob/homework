@@ -1,20 +1,17 @@
 package dao;
 
+import dao.manager.OperationManager;
+import dao.mapper.UserMapper;
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by boro on 23.03.15.
@@ -59,6 +56,7 @@ public class UserDao implements Dao<User> {
 
     @Override
     public void update(User user, int id) throws SQLException, IOException, ClassNotFoundException {
+        id++;
         Connection connection = operationManager.setConnection();
         getCount();
         String sql = "UPDATE USERS SET firstname = ?, lastname = ?,  age = ?  WHERE id = ?";
