@@ -1,65 +1,58 @@
 package dao;
 
 import model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by boro on 23.03.15.
  */
+@Repository
 public class UserDao implements Dao<User> {
-    ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-    OperationManager operationManager = (OperationManager) context.getBean("operationManager");
+    @Autowired
+    OperationManager operationManager;
+
+    private JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    public UserDao(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    }
 
     @Override
     public void create(User user) throws IOException, SQLException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
-        String sql = "INSERT INTO USERS (id, firstname, lastname, age) VALUES ( DEFAULT, '"+user.getFirstname()
-                +"', '"+user.getLastname()+"', "+user.getAge()+")";
-        operationManager.doQuery(sql);
+        String sql = "INSERT INTO USERS VALUES (DEFAULT,?,?,?)";
+        jdbcTemplate.update(sql, user.getFirstname(), user.getLastname(), user.getAge());
         operationManager.closeConnection();
     }
 
     @Override
     public User get(int id) throws SQLException, IOException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
-        String sql = "SELECT firstname,lastname,age FROM USERS WHERE id = "+ id;
-        ResultSet resultSet = operationManager.getResultSet(sql);
-       User user = new User();
-
-        if (resultSet.next()) {
-            user.setId(id);
-            user.setAge(Integer.parseInt(resultSet.getString(3)));
-            user.setFirstname(resultSet.getString(1));
-            user.setLastname(resultSet.getString(2));
-        }
+        String sql = "SELECT firstname,lastname,age FROM USERS WHERE id = " + id;
+        User user = (User) jdbcTemplate.query(sql, new UserMapper()).get(0);
         operationManager.closeConnection();
         return user;
     }
 
     @Override
-    public ArrayList<User> getAll() throws SQLException, IOException, ClassNotFoundException {
-        ArrayList<User> users = new ArrayList<User>();
+    public List<User> getAll() throws SQLException, IOException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
-        String sql = "SELECT firstname,lastname,age FROM USERS";
-        ResultSet resultSet = operationManager.getResultSet(sql);
-
-        int i = 1;
-        while (resultSet.next()) {
-            User user = new User();
-            user.setId(i);
-            user.setAge(Integer.parseInt(resultSet.getString(3)));
-           user.setFirstname(resultSet.getString(1));
-           user.setLastname(resultSet.getString(2));
-           users.add(user);
-            i++;
-        }
+        String sql = "SELECT * FROM USERS";
+        List<User> users = jdbcTemplate.query(sql, new UserMapper());
         operationManager.closeConnection();
         return users;
     }
@@ -67,17 +60,18 @@ public class UserDao implements Dao<User> {
     @Override
     public void update(User user, int id) throws SQLException, IOException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
-        String sql = "UPDATE USERS SET firstname = '"+user.getFirstname() +"', lastname = '"
-                +user.getLastname()+"', age = "+user.getAge()+" WHERE id = "+id;
-        operationManager.doQuery(sql);
+        getCount();
+        String sql = "UPDATE USERS SET firstname = ?, lastname = ?,  age = ?  WHERE id = ?";
+        jdbcTemplate.update(sql, user.getFirstname(), user.getLastname(), user.getAge(), id);
+
         operationManager.closeConnection();
     }
 
     @Override
     public void delete(int id) throws SQLException, IOException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
-        String sql = "DELETE FROM  APP.USERS WHERE id = " +id;
-        operationManager.doQuery( sql);
+        String sql = "DELETE FROM  APP.USERS WHERE id = ?";
+        jdbcTemplate.update(sql, id);
         operationManager.closeConnection();
     }
 
@@ -85,9 +79,7 @@ public class UserDao implements Dao<User> {
     public int getCount() throws SQLException, IOException, ClassNotFoundException {
         Connection connection = operationManager.setConnection();
         String sql = "SELECT COUNT (*) FROM  USERS";
-        ResultSet resultSet= operationManager.getResultSet(sql);
-        resultSet.next();
-        int count = Integer.parseInt(resultSet.getString(1));
+        int count = jdbcTemplate.queryForObject(sql, Integer.class);
         operationManager.closeConnection();
         return count;
     }

@@ -12,9 +12,15 @@
     </bean>
     <bean id="operationManager" class="dao.OperationManager">
     </bean>
-    <context:component-scan base-package= "config" />
+    <context:component-scan base-package= "config, dao" />
     <context:annotation-config/>
     <bean id="config" class="config.DatabaseConfig">
     </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.apache.derby.jdbc.EmbeddedDriver" />
+        <property name="url" value="${connectionUrl}" />
+    </bean>
+
     <context:property-placeholder location="classpath:derby-env.properties" />
     </beans>

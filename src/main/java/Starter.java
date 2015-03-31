@@ -1,4 +1,5 @@
 import config.DatabaseConfig;
+import dao.OrderDao;
 import dao.UserDao;
 import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,9 @@ public class Starter {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         Starter starter = (Starter) context.getBean("starter");
         starter.createTables();
-        UserDao userDao =  new UserDao();
+        UserDao userDao =  context.getBean("userDao",UserDao.class);
+        OrderDao orderDao = context.getBean("orderDao", OrderDao.class);
+
         System.out.println("USER COUNT = " + userDao.getCount());
         System.out.println("***********************");
         userDao.create(new User("Tolstoy", "Lev", 19));
@@ -32,7 +35,7 @@ public class Starter {
         User user = userDao.get(2);
         user.setAge(59);
         user.setFirstname("Pavel");
-        userDao.update(user, user.getId());
+        userDao.update(user, user.getId()+1);
         for (int i = 0; i<userDao.getAll().size(); i++) {
             System.out.println("USERS: " + userDao.getAll().get(i).toString());
         }
@@ -75,5 +78,6 @@ public class Starter {
                 throw e;
             }
         }
+        connection.close();
     }
 }
