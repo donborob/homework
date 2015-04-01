@@ -76,7 +76,7 @@
       <file leaf-file-name="OrderMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/mapper/OrderMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+            <state vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="450">
               <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -85,24 +85,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="517" max-vertical-offset="1320">
-              <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+            <state vertical-scroll-proportion="1.2666667" vertical-offset="787" max-vertical-offset="1560">
+              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1427799311811" expanded="true" signature="914:954" placeholder="INSERT INTO ..." />
-                <marker date="1427799311811" expanded="true" signature="1287:1339" placeholder="SELECT first..USERS..." />
-                <marker date="1427799311811" expanded="true" signature="1688:1707" placeholder="SELECT * FRO..USERS..." />
-                <marker date="1427799311811" expanded="true" signature="2090:2118" placeholder="UPDATE USERS..." />
-                <marker date="1427799311811" expanded="true" signature="2090:2119" placeholder="UPDATE USERS..." />
-                <marker date="1427799311811" expanded="true" signature="2090:2156" placeholder="UPDATE USERS..." />
-                <marker date="1427799311811" expanded="true" signature="2090:2157" placeholder="UPDATE USERS..." />
-                <marker date="1427799311811" expanded="true" signature="2090:2157" placeholder="UPDATE USERS..." />
-                <marker date="1427799311811" expanded="true" signature="2090:2158" placeholder="UPDATE USERS..." />
-                <marker date="1427799311811" expanded="true" signature="2499:2534" placeholder="DELETE FROM ..." />
-                <marker date="1427799311811" expanded="true" signature="2813:2841" placeholder="SELECT COUNT..USERS..." />
+                <marker date="1427894171295" expanded="true" signature="1224:1284" placeholder="INSERT INTO ..." />
+                <marker date="1427894171295" expanded="true" signature="1706:1758" placeholder="SELECT first..USERS..." />
+                <marker date="1427894171295" expanded="true" signature="2107:2126" placeholder="SELECT * FRO..USERS..." />
+                <marker date="1427894171295" expanded="true" signature="2495:2523" placeholder="UPDATE USERS..." />
+                <marker date="1427894171295" expanded="true" signature="2495:2524" placeholder="UPDATE USERS..." />
+                <marker date="1427894171295" expanded="true" signature="2495:2582" placeholder="UPDATE USERS..." />
+                <marker date="1427894171295" expanded="true" signature="2495:2583" placeholder="UPDATE USERS..." />
+                <marker date="1427894171295" expanded="true" signature="2495:2583" placeholder="UPDATE USERS..." />
+                <marker date="1427894171295" expanded="true" signature="2495:2586" placeholder="UPDATE USERS..." />
+                <marker date="1427894171295" expanded="true" signature="3049:3083" placeholder="DELETE FROM ..." />
+                <marker date="1427894171295" expanded="true" signature="3049:3086" placeholder="DELETE FROM ..." />
+                <marker date="1427894171295" expanded="true" signature="3392:3420" placeholder="SELECT COUNT..USERS..." />
               </folding>
             </state>
           </provider>
@@ -124,11 +125,9 @@
       <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/mapper/UserMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="22" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="435">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,7 +148,7 @@
       <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="210">
               <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding />
             </state>
@@ -160,16 +159,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/Dao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Starter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Starter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Starter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.8581561" vertical-offset="16" max-vertical-offset="1320">
+            <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1320">
               <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -225,6 +224,7 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/mapper/OrderMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/OrderDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/Starter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/UserDao.java" />
       </list>
     </option>
@@ -240,10 +240,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="165" />
-    <option name="y" value="305" />
-    <option name="width" value="1230" />
-    <option name="height" value="541" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -270,8 +270,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -492,6 +490,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -852,15 +852,16 @@
       <workItem from="1427466932827" duration="8931000" />
       <workItem from="1427524060666" duration="50000" />
       <workItem from="1427734536133" duration="178000" />
-      <workItem from="1427792759466" duration="6880000" />
+      <workItem from="1427792759466" duration="8225000" />
+      <workItem from="1427892934686" duration="1328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122128000" />
+    <option name="totallyTimeSpent" value="124801000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="165" y="305" width="1230" height="541" extended-state="0" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -874,14 +875,13 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27964205" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31692308" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10769231" sideWeight="0.49961567" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.54615384" sideWeight="0.49961567" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27154472" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2567256" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115447156" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976827" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10837817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -892,6 +892,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976827" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1243,24 +1244,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/manager/OperationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="765">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
@@ -1291,6 +1274,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Starter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1320">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1427799289327" expanded="true" signature="2135:2151" placeholder="DROP TABLE U..." />
+            <marker date="1427799289327" expanded="true" signature="2177:2474" placeholder="CREATE TABLE..USERS..." />
+            <marker date="1427799289327" expanded="true" signature="2685:2985" placeholder="CREATE TABLE..ORDERS..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="435">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/mapper/OrderMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
@@ -1298,6 +1302,24 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/manager/OperationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="765">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,44 +1342,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="517" max-vertical-offset="1320">
-          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+        <state vertical-scroll-proportion="1.2666667" vertical-offset="787" max-vertical-offset="1560">
+          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1427799311811" expanded="true" signature="914:954" placeholder="INSERT INTO ..." />
-            <marker date="1427799311811" expanded="true" signature="1287:1339" placeholder="SELECT first..USERS..." />
-            <marker date="1427799311811" expanded="true" signature="1688:1707" placeholder="SELECT * FRO..USERS..." />
-            <marker date="1427799311811" expanded="true" signature="2090:2118" placeholder="UPDATE USERS..." />
-            <marker date="1427799311811" expanded="true" signature="2090:2119" placeholder="UPDATE USERS..." />
-            <marker date="1427799311811" expanded="true" signature="2090:2156" placeholder="UPDATE USERS..." />
-            <marker date="1427799311811" expanded="true" signature="2090:2157" placeholder="UPDATE USERS..." />
-            <marker date="1427799311811" expanded="true" signature="2090:2157" placeholder="UPDATE USERS..." />
-            <marker date="1427799311811" expanded="true" signature="2090:2158" placeholder="UPDATE USERS..." />
-            <marker date="1427799311811" expanded="true" signature="2499:2534" placeholder="DELETE FROM ..." />
-            <marker date="1427799311811" expanded="true" signature="2813:2841" placeholder="SELECT COUNT..USERS..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8581561" vertical-offset="16" max-vertical-offset="1320">
-          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1427799289327" expanded="true" signature="2135:2151" placeholder="DROP TABLE U..." />
-            <marker date="1427799289327" expanded="true" signature="2177:2474" placeholder="CREATE TABLE..USERS..." />
-            <marker date="1427799289327" expanded="true" signature="2685:2985" placeholder="CREATE TABLE..ORDERS..." />
+            <marker date="1427894171295" expanded="true" signature="1224:1284" placeholder="INSERT INTO ..." />
+            <marker date="1427894171295" expanded="true" signature="1706:1758" placeholder="SELECT first..USERS..." />
+            <marker date="1427894171295" expanded="true" signature="2107:2126" placeholder="SELECT * FRO..USERS..." />
+            <marker date="1427894171295" expanded="true" signature="2495:2523" placeholder="UPDATE USERS..." />
+            <marker date="1427894171295" expanded="true" signature="2495:2524" placeholder="UPDATE USERS..." />
+            <marker date="1427894171295" expanded="true" signature="2495:2582" placeholder="UPDATE USERS..." />
+            <marker date="1427894171295" expanded="true" signature="2495:2583" placeholder="UPDATE USERS..." />
+            <marker date="1427894171295" expanded="true" signature="2495:2583" placeholder="UPDATE USERS..." />
+            <marker date="1427894171295" expanded="true" signature="2495:2586" placeholder="UPDATE USERS..." />
+            <marker date="1427894171295" expanded="true" signature="3049:3083" placeholder="DELETE FROM ..." />
+            <marker date="1427894171295" expanded="true" signature="3049:3086" placeholder="DELETE FROM ..." />
+            <marker date="1427894171295" expanded="true" signature="3392:3420" placeholder="SELECT COUNT..USERS..." />
           </folding>
         </state>
       </provider>
